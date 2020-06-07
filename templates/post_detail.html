@@ -6,7 +6,7 @@
       <div class="card-body">
         <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <h4>{{post.tech_stack}}</h4>
+        <h5>{{post.tech_stack}}</h5>
         Github url: <a href="{{ post.github_url }}">{{post.github_url}}</a>
         <p class="card-text">{{ object.content | linebreaks }}</p>
       </div>
