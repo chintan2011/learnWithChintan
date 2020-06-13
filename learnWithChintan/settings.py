@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'markdown_deux',
+    'rest_framework',
 ]
+
+# Here all the images will be stored from the database
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,7 +60,6 @@ ROOT_URLCONF = 'learnWithChintan.urls'
 
 TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 
-print("This is Templates Direcotry " + TEMPLATES_DIR)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

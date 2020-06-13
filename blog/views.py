@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Post
 from django.views import generic
 from rest_framework import viewsets
-from .serializers import PostSerializer
+#from .serializers import PostSerializer
 
 # Create your views here.
 
@@ -14,6 +14,7 @@ class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-class PostViewSet(viewsets.ModelViewSet):
+""" class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all().order_by('author')
     serializer_class = PostSerializer
+ """
