@@ -1,18 +1,22 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% block tech_icons %}
 {% load markdown_deux_tags %}
 <div class="container">
-  <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top">
-      <div class="card-body">
-        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <h5>{{post.tech_stack}}</h5>
-        Github url: <a href="{{ post.github_url }}">{{post.github_url}}</a>
-        <p class="card-text">{{ object.content  |markdown | linebreaks }}</p>
-      </div>
-    </div>
-    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
-  </div>
+  	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<div class="row">
+    	<div class="col-md-8 card mb-4  mt-3 left  top">
+      		<div class="card-body">
+        		<h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+				<p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+				{% include 'tech_icons.html' %}
+				<br></br>
+        		<h5>{{post.tech_stack | markdown }}</h5>
+        			Github url: <a href="{{ post.github_url }}">{{post.github_url}}</a>
+				<p class="card-text">{{ object.content  | markdown | linebreaks }}</p>				
+      		</div>
+		</div>
+	{% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+	{% endblock tech_icons %}
+	</div>	  
 </div>
 
 {% endblock content %}
