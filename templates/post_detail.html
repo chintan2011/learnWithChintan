@@ -9,7 +9,7 @@
 				<p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
 				{% include 'tech_icons.html' %}
 				<br></br>
-        		<h5>{{post.tech_stack | markdown }}</h5>
+        		<!-- <h5>{{post.tech_stack | markdown }}</h5> -->
         			Github url: <a href="{{ post.github_url }}">{{post.github_url}}</a>
 				<p class="card-text">{{ object.content  | markdown | linebreaks }}</p>				
       		</div>
