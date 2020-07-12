@@ -1,1 +1,1 @@
-web: gunicorn learnWithChintan:app
+web: uwsgi --http : --wsgi-file learnWithChintan/wsgi.py
