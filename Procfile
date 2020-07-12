@@ -1,1 +1,1 @@
-web: gunicorn learnwithchintan.wsgi
+web: python manage.py runserver
