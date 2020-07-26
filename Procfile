@@ -1,1 +1,1 @@
-web: uwsgi --http : --wsgi-file learnWithChintan/wsgi.py
+web: uwsgi --http : --wsgi-file learnWithChintan/wsgi.py 0.0.0:$PORT
